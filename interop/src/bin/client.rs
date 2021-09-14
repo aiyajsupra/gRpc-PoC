@@ -27,7 +27,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let test_cases = matches.test_case;
 
     #[allow(unused_mut)]
-    let mut endpoint = Endpoint::from_static("http://localhost:10000")
+    let mut endpoint = Endpoint::from_static("http://19.0.1.154:10000")
         .timeout(Duration::from_secs(5))
         .concurrency_limit(30);
 

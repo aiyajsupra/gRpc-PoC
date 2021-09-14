@@ -15,7 +15,7 @@ async fn main() -> std::result::Result<(), Box<dyn std::error::Error>> {
 
     let matches = Opts::from_args();
 
-    let addr = "127.0.0.1:10000".parse().unwrap();
+    let addr = "0.0.0.0:10000".parse().unwrap();
 
     let mut builder = Server::builder();
 
