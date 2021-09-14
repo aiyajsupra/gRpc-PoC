@@ -11,8 +11,8 @@ use std::time::{Duration, Instant};
 pub type TestClient = TestServiceClient<Channel>;
 pub type UnimplementedClient = UnimplementedServiceClient<Channel>;
 
-const LARGE_REQ_SIZE: usize = 1000000;
-const LARGE_RSP_SIZE: i32 = 1000000;
+const LARGE_REQ_SIZE: usize = 64;
+const LARGE_RSP_SIZE: i32 = 64;
 
 pub async fn empty_unary(client: &mut TestClient, assertions: &mut Vec<TestAssertion>) {
     let result = client.empty_call(Request::new(Empty {})).await;
